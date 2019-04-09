@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const Background = styled.div`
-    background: linear-gradient(#99BEFA, #D03DF5);
+    background: linear-gradient(#FA5EC4, #D03DF5, #91DCF8);
     height: 100%;
     width: 100%
 `
@@ -38,9 +38,9 @@ class ChatForm extends React.Component {
         return (
             <Background>
                 <GlobalStyle />
-                { this.state.chatList.map((chat)=> {
-                    return <MessageBubble chat={chat}/>
-                })}
+                    { this.state.chatList.map((chat)=> {
+                        return <MessageBubble className="aaaa" chat={chat}/>
+                    })}
             </Background>
         )
     }
