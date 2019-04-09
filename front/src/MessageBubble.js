@@ -2,11 +2,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const H3 = styled.h3`
+  margin: 0px;
+`
 
 const MessageBubble = ({chat}) => {
     return (
         <div>
-            <h3>{chat}</h3>
+            <H3>{chat}</H3>
         </div>
     )
 }
