@@ -5,16 +5,13 @@ import MessageBubble from './MessageBubble';
 
 const GlobalStyle = createGlobalStyle`
   html, body {
-    width: 100%; 
     height: 100%;
     margin: 0px;
   }
   #root{
-    width: 100%; 
     height: 100%;
   }
   .App{
-    width: 100%; 
     height: 100%;
   }
 `
@@ -22,7 +19,8 @@ const GlobalStyle = createGlobalStyle`
 const Background = styled.div`
     background: linear-gradient(#FA5EC4, #D03DF5, #91DCF8);
     height: 100%;
-    width: 100%
+    display: flex;
+    flex-direction: column-reverse;
 `
 
 class ChatForm extends React.Component {

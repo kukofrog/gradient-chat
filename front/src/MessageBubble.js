@@ -8,10 +8,21 @@ const Box = styled.div`
     text-align: right;
 `
 
+const BackGround = styled.div`
+    align-items: center;
+    display: flex;
+    flex: 1 1 0%;
+    background: white;
+    float: none;
+    justify-content: flex-end;
+`;
+
 const Bubble = styled.div`
+    display: flex;
 `
 
-const H3 = styled.h3`
+const Span = styled.span`
+  background: rgba(0, 0, 0, 0);
   margin: 0px;
   margin-right: 10px;
 `
@@ -20,7 +31,8 @@ const MessageBubble = ({chat}) => {
     return (
             <Box>
                 <Bubble>
-                    <H3>{chat}</H3>
+                    <BackGround/>
+                    <Span>{chat}</Span>
                 </Bubble>
             </Box>
     )
