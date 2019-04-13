@@ -28,7 +28,8 @@ class ChatForm extends React.Component {
         chatList: [
             'aaa',
             'fffa',
-            'fsadfdfssd'
+            'fsadfdfssd',
+            '안녕하세요. 제이름은 형탁이인데 어쩌고저쩌고'
         ]
     }
 
@@ -36,7 +37,7 @@ class ChatForm extends React.Component {
         return (
             <Background>
                 <GlobalStyle />
-                    { this.state.chatList.map((chat)=> {
+                    { this.state.chatList.reverse().map((chat)=> {
                         return <MessageBubble className="aaaa" chat={chat}/>
                     })}
             </Background>
