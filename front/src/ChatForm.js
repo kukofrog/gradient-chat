@@ -24,6 +24,11 @@ const Background = styled.div`
     flex-direction: column-reverse;
 `
 
+const WhiteBox = styled.div`
+  height: 100%;
+  background-color: #ffffff;
+`
+
 class ChatForm extends React.Component {
     state = {
         chatList: [
@@ -51,6 +56,7 @@ class ChatForm extends React.Component {
                     { this.state.chatList.map((chat, index)=> {
                         return <MessageBubble chat={chat} key={index}/>
                     })}
+                    <WhiteBox />
             </Background>
         )
     }
