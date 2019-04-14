@@ -27,9 +27,9 @@ const Background = styled.div`
 class ChatForm extends React.Component {
     state = {
         chatList: [
-            'aaa',
-            'fffa',
-            'fsadfdfssd',
+            '111',
+            '222',
+            '333',
             '안녕하세요. 제이름은 형탁이인데 어쩌고저쩌고'
         ]
     }
@@ -37,8 +37,8 @@ class ChatForm extends React.Component {
     sendMessage = (data) => {
       this.setState({
         chatList: [
-          ...this.state.chatList,
-          data
+          data,
+          ...this.state.chatList
         ]
       })
     }
@@ -48,8 +48,8 @@ class ChatForm extends React.Component {
             <Background>
                 <GlobalStyle />
                     <ChatInput sendMessage={this.sendMessage}/>
-                    { this.state.chatList.reverse().map((chat, index)=> {
-                        return <MessageBubble className="aaaa" chat={chat} key={index}/>
+                    { this.state.chatList.map((chat, index)=> {
+                        return <MessageBubble chat={chat} key={index}/>
                     })}
             </Background>
         )
