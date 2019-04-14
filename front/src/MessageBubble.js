@@ -18,7 +18,7 @@ const BackGround = styled.div`
 `;
 
 const Bubble = styled.div`
-    // border: 1px solid #ffffff;
+    border: 1px solid #ffffff;
     overflow: hidden;
 `
 
@@ -59,7 +59,7 @@ const Span = styled.span`
   margin: 0px;
   margin-right: 5px;
   margin-left: 5px;
-  font-size: 2em;
+  font-size: 3em;
   display:block;
   
 `

@@ -10,8 +10,8 @@ const StyledInput = styled.input`
     background-color: #ffffff;
     border-top: 1px solid #000000;
     width: 100%;
-    height: 30px;
-    font-size: 2em;
+    height: 50px;
+    font-size: 3em;
 `
 
 class ChatInput extends React.Component {
@@ -42,6 +42,7 @@ class ChatInput extends React.Component {
         return (
             <Form>
                 <StyledInput
+                    placeholder="메세지를 입력해 보세요"
                     value={this.state.msg}
                     onChange={this.handleChange}
                     onKeyPress={this.handlePress}
