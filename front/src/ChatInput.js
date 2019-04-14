@@ -1,6 +1,19 @@
 // @flow
 import React from 'react';
 import styled from 'styled-components';
+
+const Form = styled.div`
+    display: flex;
+`
+
+const StyledInput = styled.input`
+    background-color: #ffffff;
+    border-top: 1px solid #000000;
+    width: 100%;
+    height: 30px;
+    font-size: 2em;
+`
+
 class ChatInput extends React.Component {
     state={
         msg: ''
@@ -22,13 +35,13 @@ class ChatInput extends React.Component {
 
     render() {
         return (
-            <div>
-                <input 
+            <Form>
+                <StyledInput
                     value={this.state.msg}
                     onChange={this.handleChange} 
                 />
                 <button onClick={this.handleSubmit}>aa</button>
-            </div>
+            </Form>
         )
     }
 }
