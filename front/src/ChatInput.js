@@ -25,12 +25,17 @@ class ChatInput extends React.Component {
         })
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
+    handleSubmit = () => {
         this.props.sendMessage(this.state.msg);
         this.setState({
             msg: ''
         })
+    }
+
+    handlePress = (f) => {
+        if(f.key == 'Enter'){
+          this.handleSubmit();
+        }
     }
 
     render() {
@@ -38,9 +43,10 @@ class ChatInput extends React.Component {
             <Form>
                 <StyledInput
                     value={this.state.msg}
-                    onChange={this.handleChange} 
+                    onChange={this.handleChange}
+                    onKeyPress={this.handlePress}
                 />
-                <button onClick={this.handleSubmit}>aa</button>
+                <button onClick={this.handleSubmit}>Send</button>
             </Form>
         )
     }

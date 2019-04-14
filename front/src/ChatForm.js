@@ -22,6 +22,7 @@ const Background = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column-reverse;
+    overflow-y: scroll;
 `
 
 const WhiteBox = styled.div`
@@ -32,10 +33,6 @@ const WhiteBox = styled.div`
 class ChatForm extends React.Component {
     state = {
         chatList: [
-            '111',
-            '222',
-            '333',
-            '안녕하세요. 제이름은 형탁이인데 어쩌고저쩌고'
         ]
     }
 
