@@ -19,20 +19,22 @@ const BackGround = styled.div`
 
 const Bubble = styled.div`
         border: 1px solid #ffffff;
-        border-bottom-left-radius: 48px;
-        border-top-left-radius: 48px;
 `
+
 const B = styled.div`
-&:after{
-    position: absolute;
-    border: 30px solid #ffffff;
-    bottom: -30px;
-    top: -30px;
-    left:-30px;
-    right: -30px;
+  &:after {
+    border: 30px solid white;
+    border-radius: 36px;
     border-bottom-left-radius: 48px;
     border-top-left-radius: 48px;
-    margin-right: 5px;
+    bottom: -30px;
+    content: '';
+    position: absolute;
+    left: -30px;
+    pointer-events: none;
+    right: -30px;
+    top: -30px;
+    z-index: 3;
 }
 `
 
@@ -53,9 +55,11 @@ const MessageBubble = ({chat}) => {
             <Box>
             <BackGround/>
                 <Bubble>
-                  <A>
-                    <Span>{chat}</Span>
-                  </A>
+                  <B>
+                    <A>
+                      <Span>{chat}</Span>
+                    </A>
+                  </B>
                 </Bubble>
             </Box>
     )
