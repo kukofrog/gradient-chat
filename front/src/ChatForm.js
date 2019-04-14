@@ -2,6 +2,7 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import MessageBubble from './MessageBubble';
+import ChatInput from './ChatInput';
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -33,12 +34,22 @@ class ChatForm extends React.Component {
         ]
     }
 
+    sendMessage = (data) => {
+      this.setState({
+        chatList: [
+          ...this.state.chatList,
+          data
+        ]
+      })
+    }
+
     render() {
         return (
             <Background>
                 <GlobalStyle />
-                    { this.state.chatList.reverse().map((chat)=> {
-                        return <MessageBubble className="aaaa" chat={chat}/>
+                    <ChatInput sendMessage={this.sendMessage}/>
+                    { this.state.chatList.reverse().map((chat, index)=> {
+                        return <MessageBubble className="aaaa" chat={chat} key={index}/>
                     })}
             </Background>
         )

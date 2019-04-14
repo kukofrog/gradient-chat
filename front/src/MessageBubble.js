@@ -18,29 +18,41 @@ const BackGround = styled.div`
 `;
 
 const Bubble = styled.div`
-        border: 1px solid #ffffff;
+    // border: 1px solid #ffffff;
+    overflow: hidden;
 `
 
 const B = styled.div`
   &:after {
     border: 30px solid white;
-    border-radius: 36px;
-    border-bottom-left-radius: 48px;
-    border-top-left-radius: 48px;
     bottom: -30px;
     content: '';
-    position: absolute;
+    display: block;
     left: -30px;
     pointer-events: none;
+    position: absolute;
     right: -30px;
     top: -30px;
-    z-index: 3;
+
+    // border-bottom-right-radius: 48px;
+    // border-top-right-radius: 48px;
+    // border-bottom-left-radius: 48px;
+    // border-top-left-radius: 48px;
 }
 `
 
-const A = styled.span`
-    
+const S2 = styled.span`
+  border: 30px solid white;
+  bottom: -30px;
+  content: '';
+  display: block;
+  left: -30px;
+  pointer-events: none;
+  position: absolute;
+  right: -30px;
+  top: -30px;
 `
+
 
 const Span = styled.span`
   background: rgba(0, 0, 0, 0);
@@ -48,6 +60,8 @@ const Span = styled.span`
   margin-right: 5px;
   margin-left: 5px;
   font-size: 2em;
+  display:block;
+  
 `
 
 const MessageBubble = ({chat}) => {
@@ -55,11 +69,7 @@ const MessageBubble = ({chat}) => {
             <Box>
             <BackGround/>
                 <Bubble>
-                  <B>
-                    <A>
-                      <Span>{chat}</Span>
-                    </A>
-                  </B>
+                      <Span><span>{chat}</span></Span>
                 </Bubble>
             </Box>
     )
